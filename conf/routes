@@ -1,0 +1,17 @@
+# Play Routes
+
+GET     /                                                   controllers.DispositivoController.index
+
+GET     /template                                           controllers.DispositivoController.templateHtml
+
+GET     /dispositivo/todos                                  controllers.DispositivoController.obtenerTodos
+
+POST    /dispositivo/insertarFormulario                     controllers.DispositivoController.insertarForm
+
+POST    /dispositivo/insertar                               controllers.DispositivoController.insertar
+
+PUT     /dispositivo/actualizar                             controllers.DispositivoController.actualizar
+
+GET     /dispositivo/:imei                                  controllers.DispositivoController.obtenerPorImei(imei:String)
+
+GET     /mensaje/random                                     controllers.MensajeController.mensajeAleatorio

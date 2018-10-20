@@ -1,0 +1,5 @@
+imei = Imei
+marca = Marca
+modelo = Modelo
+
+dispositivo.creado = El dispositivo se ha creado!

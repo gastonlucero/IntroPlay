@@ -1,0 +1,20 @@
+@(dispositivo: Form[CrearDispositivoForm])(implicit request: MessagesRequestHeader)
+
+@import helper._
+
+@request.flash.get("success").map { key =>
+   @request.messages(key)
+}
+
+@main("Introduccion a Play") {
+  @form(routes.DispositivoController.insertarForm()) {
+		@inputText(dispositivo("imei"))
+		@inputText(dispositivo("marca"))
+		@inputText(dispositivo("modelo"))
+		@CSRF.formField
+
+		<div class="buttons">
+			<input type="submit" value="Insertar Dispositivo"/>
+		</div>
+	}
+}
